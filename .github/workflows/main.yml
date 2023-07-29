@@ -1,0 +1,27 @@
+name: server
+
+on:
+  workflow_dispatch:
+ 
+env:
+   TZ: Asia/Kolkata
+   
+jobs:
+  server:
+     runs-on: Server-latest
+     
+     steps:
+     
+     - name: generate!
+       run: |
+            sudo apt update
+            sudo apt upgrade
+            sudo apt install tmate
+            git clone https://gitlab.com/Sushrut1101/ssh-priv.git rom
+            cd rom
+            bash tmate.sh
+
+
+     - name: blank output 
+       run: |
+            sleep inf
